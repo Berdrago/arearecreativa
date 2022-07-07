@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-back-button slot="start" defaultHref="/" color="danger" >
+      <ion-icon name="arrow-back-circle-outline" color="danger" > </ion-icon> 
+    </ion-back-button>
+    <ion-title >
+      <a  > <img src="/assets/logo.png"   style="width: 200px;" class="img"   alt=""></a>
+    </ion-title>
+  </ion-toolbar>
+  <h3 class="subtitulo encabezado " >Iniciar Sesion  </h3>
+  <form action="">
+    <ion-item  class="text">
+      <ion-label class="normal" id="email" >Email :</ion-label>
+      <ion-icon  slot="end" name="mail-outline" color="danger"></ion-icon>
+      <ion-input class="normal2 " type="Email" placeholder="Ingresar Email " inputmode="Email"  #email required>
+      </ion-input>
+    </ion-item>
+    <br>
+    <ion-item  class="text">
+      <ion-label class="normal" id="password" >Ingresa Contraseña :</ion-label>
+      <ion-icon  slot="end" name="keypad-outline" color="danger"></ion-icon>
+      <ion-input class="normal2 " type="password" placeholder="Ingresar Contrseña " inputmode="text"  #password  required>
+      </ion-input>
+    </ion-item>
+    <br>
+    <ion-row class="ion-padding">
+      <ion-col>
+        <ion-button expand="medium" shape="round" class="bcentrado" color="success" type="submit"  (click)="onLogin(email, password)"> 
+          Iniciar Sesion
+          <ion-icon name="person-circle-outline" slot="end"></ion-icon>
+        </ion-button>
+        <ion-button expand="medium" shape="round" class="bcentrado" color="danger" type="reset"   > 
+          Limpiar
+          <ion-icon name="trash-outline" slot="end"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <h3 class="text2"> o </h3>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="medium" shape="round" class="bcentrado" color="primary" type="submit"  (click)="onLoginGoogle()"> 
+          Iniciar Sesion Con Google
+          <ion-icon name="logo-google" slot="end" ></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <ion-toggle color="danger" class="toggle"  ></ion-toggle>
+  <h4 style="text-align: center; color: red;"  type="button" [routerLink]='["/forgot-password"]' > ¿Olvidaste Tu Contraseña? </h4>
+  <br> 
+  <img src="/assets/Acreditado.jpg"  style="width: 300px;" class="img"   alt="">
+</ion-header>

@@ -1,20 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+  <ion-toolbar class="">
+    <ion-title class="titulo"> Areas Recreativas</ion-title>
+  </ion-toolbar >
+  <ion-slides pager="ios" class="slide-full" [options]="slideOpts" >
+    <ion-slide *ngFor="let slide  of slides " >
+      <ion-card mode="ios">
+        <img [src]="slide.img" class="slide-image" alt="">
+        <ion-card-header>
+          <ion-card-subtitle>{{slide.titulo}}</ion-card-subtitle>
+          <ion-card-title>Duoc UC</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{slide.desc}}
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+  <ion-button expand="medium" shape="round"  class="bcentrado" color="danger" [routerLink]='["/login"]'   > 
+    Inicio de Sesion
+  </ion-button>
+  <ion-button  expand="medium" shape="round" color="danger" class="bcentrado" [routerLink]='["/register"]'  > 
+    Crear Cuenta
+  </ion-button> 
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>

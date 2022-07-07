@@ -83,6 +83,11 @@
    */
 
   body {
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('/assets/SedePN.jpg') !important ;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size:cover !important;
+    height: 100vh !important;
     --ion-color-primary: #428cff;
     --ion-color-primary-rgb: 66,140,255;
     --ion-color-primary-contrast: #ffffff;

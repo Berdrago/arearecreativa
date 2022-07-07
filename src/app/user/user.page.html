@@ -1,0 +1,22 @@
+<ion-menu></ion-menu>
+<ion-header padding >
+  <ion-toolbar *ngIf="user$ | async as user">
+    <ion-title><strong>{{user.email}}</strong></ion-title>
+    <ion-button  slot='end' expand="medium"   color="danger" (click)="sendLogout()"  > 
+      Cerrar Sesion
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+  <ion-card *ngFor="let producto of productos ">
+    <ion-card-header mode="ios">
+        <ion-card-title>{{producto.categoria}}</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ion-button fill="outline" color="danger"  (click)="presentAlert()">Reserva</ion-button>
+    </ion-item>
+    <ion-card-content> 
+      {{producto.fecha}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

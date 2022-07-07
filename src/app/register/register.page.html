@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-back-button slot="start" defaultHref="/" color="danger" >
+      <ion-icon name="arrow-back-circle-outline" color="danger" > </ion-icon> 
+    </ion-back-button>
+    <ion-title >
+      <a > <img src="/assets/logo.png"   style="width: 200px;" class="img"   alt=""></a>
+    </ion-title>
+  </ion-toolbar>
+  <h3 class="subtitulo encabezado">Registro de Usuario  </h3>
+  <form action="">
+    <ion-item  class="text">
+      <ion-label class="normal" id="usuario" >Nombre : </ion-label>
+      <ion-icon name="person-outline" slot="end" color="danger"></ion-icon>
+      <ion-input class="normal2 " type="text" placeholder="Ingresar Nombre de Usuario " inputmode="text" #usuario required >
+      </ion-input>
+    </ion-item>
+    <br>
+    <ion-item  class="text">
+      <ion-label class="normal" id="email" >Email :</ion-label>
+      <ion-icon  slot="end" name="mail-outline" color="danger"></ion-icon>
+      <ion-input class="normal2 " type="Email" placeholder="Ingresar Email " inputmode="Email"  #email required>
+      </ion-input>
+    </ion-item>
+    <br>
+    <ion-item  class="text">
+      <ion-label class="normal" id="sede" >Sede Duoc :</ion-label>
+      <ion-icon name="home-outline" slot="end" color="danger"></ion-icon>
+      <ion-input class="normal2 " type="text" placeholder="Sede" inputmode="text" #sede required  ></ion-input>
+    </ion-item>
+    <br>
+    <ion-item  class="text">
+      <ion-label class="normal" id="password" >Ingresa Contraseña :</ion-label>
+      <ion-icon  slot="end" name="keypad-outline" color="danger"></ion-icon>
+      <ion-input class="normal2 " type="password" placeholder="Ingresar Contrseña " inputmode="text"  #password  required>
+      </ion-input>
+    </ion-item>
+    <br>
+    <ion-item  class="text">
+      <ion-label class="normal" id="password2" >Repite Contraseña :</ion-label>   
+      <ion-icon  slot="end" name="keypad-outline" color="danger"></ion-icon>
+      <ion-input class="normal2 " type="password" placeholder="Ingresar Contrseña " inputmode="text"  #password2 required >
+      </ion-input>
+    </ion-item>
+    <ion-row class="ion-padding">
+      <ion-col>
+        <ion-button expand="medium" shape="round" class="bcentrado" color="success" type="submit"  (click)="onRegister(email, password)"> 
+          Registrarse
+        </ion-button>
+        <ion-button expand="medium" shape="round" class="bcentrado" color="danger" type="reset"   > 
+          Limpiar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-header>
+  
